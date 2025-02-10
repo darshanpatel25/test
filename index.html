@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .navbar-items{
+        margin-right: 120px;
+        font-size: 18px;
+    }
+    .nav-item{
+        padding: 20px;
+        
+    }
+    .title{
+        margin-left: 100px;
+        font-size: 24px;
+    }
+    .nav-item:hover{
+        background-color: rgb(61, 193, 245);
+        color: white;
+    }
+    .nav-item:hover > a{
+        color: white !important;
+    }
+    .heading-content{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        margin: 60px 250px;
+        text-align: center;
+    }
+    .heading-content h1{
+        margin: 40px;
+        color: rgb(0, 0, 58);
+    }
+    .heading-content{
+        color: gray;
+    }
+    .dropdown-item:hover{
+        background-color: rgb(61, 193, 245);
+        color: white;
+    }
+    .navbar{
+        background-color: rgb(241, 241, 241);
+    }
+    .second-content{
+        background-color: rgb(241, 241, 241);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sub-contents{
+        margin: 50px 0px;
+        width: 300px;
+    }
+    .icon-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(61, 193, 245);
+        color: white;
+        width: 75px;
+        height: 75px;
+        margin: auto;
+    }
+    .icon-box i{
+        font-size: 2rem;
+    }
+    .description{
+        margin-top: 30px !important;
+        text-align: center;
+    }
+    .navbar-toggler {
+    margin-left: auto;
+    }   
+
+    .third-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+        margin-bottom: 90px;
+    }
+    .image-container{
+        position:relative;
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .image-container img{
+        width: 300px;
+        height: 200px;
+        display: block;
+    }
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(61, 193, 245);
+        display: flex;
+        
+        justify-content:center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+    }
+
+    .image-container:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .overlay a{
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: white;
+        color: rgb(61, 193, 245);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .footer >input ,.footer textarea{
+        width: 30%;
+        margin: 10px;
+        height: 60px;
+        opacity:0.4;
+        
+    }
+    .footer textarea{
+        height: 180px;
+    }
+    
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("./2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        padding: 40px;
+    }
+   .inner-form{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin: 0px 100px;
+    
+    
+   }
+   .inner-form input{
+    
+    color: white;
+   }
+
+   .icons{
+    display: flex;
+    margin-right: 90px;
+   }
+   .icons div{
+    margin:0px 10px;
+    background-color: rgb(61, 193, 245);
+    color: white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   .logos{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: rgb(241, 241, 241);
+   }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg  sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand title" href="#">STRICT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- <div class="navbar-items"> -->
+
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Service Main 1</a></li>
+                  <li><a class="dropdown-item" href="#">Serivce Main 2</a></li>
+                  <li><a class="dropdown-item" href="#">Service Main 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              
+            </ul>
+            
+          <!-- </div> -->
+        </div>
+        </div>
+      </nav>
+<!-- First Content -->
+      <div class="heading-content">
+        <h1>Simple & Pure Design</h1>
+        
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nobis magni modi debitis, doloremque harum nisi veritatis eius impedit dolor. Obcaecati beatae mollitia autem architecto ullam recusandae maxime ipsam explicabo dolores asperiores totam tenetur, earum pariatur, dolore laboriosam quidem sequi perspiciatis. Voluptas obcaecati quas alias vitae impedit quos laudantium ipsam at inventore doloremque nam in voluptatibus deleniti, corrupti sed! Ea autem laborum quasi veritatis, blanditiis </div>
+      </div>
+<!-- Second content -->
+      <div class="second-content d-flex justify-content-evenly">
+        <div class="sub-contents">
+            <div class="icon-box">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="description mt-3">
+                <h5>Optimized for all devices</h5>
+                <p class="text-muted ">STRICT has been designed to be fully resopnsive on all devices</p>
+            </div>
+        </div>
+        <div class="sub-contents">
+            <div class="icon-box">
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <div class="description mt-3">
+                <h5>Clean & Minimal design</h5>
+                <p class="text-muted ">The multipurpose theme is espically created to be used in different projects</p>
+            </div>
+        </div>
+        <div class="sub-contents">
+            <div class="icon-box">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="description mt-3">
+                <h5>Font Awesome Icon</h5>
+                <p class="text-muted ">The multipurpose theme is espically created to be used in different projects</p>
+            </div>
+        </div>
+      </div>
+<!-- Third content -->
+      
+      <div class="third-content">
+        <h1>Showcase your work like pro</h1>
+        <p>contact me if you like work</p>
+        <div class="inner-content">
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                    <div class="image-container">
+                        <img src="./1.png" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <a href="" class="btn">1</a>
+                            <a href="" class="btn">2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4"> <div class="image-container">
+                    <img src="./3.png" alt="" class="img-fluid">
+                    <div class="overlay">
+                        <a href="" class="btn">1</a>
+                        <a href="" class="btn">2</a>
+                    </div>
+                </div></div>
+                <div class="col-md-4 mt-4"> <div class="image-container">
+                    <img src="./5.png" alt="" class="img-fluid">
+                    <div class="overlay">
+                        <a href="" class="btn">1</a>
+                        <a href="" class="btn">2</a>
+                    </div>
+                </div></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-4"> 
+                    <div class="image-container">
+                    <img src="./5.png" alt="" class="img-fluid">
+                    <div class="overlay">
+                        <a href="" class="btn">1</a>
+                        <a href="" class="btn">2</a>
+                    </div>
+                </div></div>
+                <div class="col-md-4 mt-4"> <div class="image-container">
+                    <img src="./6.png" alt="" class="img-fluid">
+                    <div class="overlay">
+                        <a href="" class="btn">1</a>
+                        <a href="" class="btn">2</a>
+                    </div>
+                </div></div>
+                <div class="col-md-4 mt-4"> <div class="image-container">
+                    <img src="./4" alt="" class="img-fluid">
+                    <div class="overlay">
+                        <a href="" class="btn">1</a>
+                        <a href="" class="btn">2</a>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+      </div>
+      <!-- Footer -->
+
+      <div class="footer">
+        <h1>Stay With Us</h1>
+        <p>We ensure Quality & Support</p>
+        
+            
+                <input type="text" name="" id="" placeholder="Full Name">
+                <input type="text" name="" id="" placeholder="Email Address">
+                <textarea name="" id="" placeholder="Message"></textarea>
+                <div class="d-flex ">
+                    <div class="inner-form">
+
+                        <input type="checkbox" name="" id="" value="">Subscribe Newsletter
+                    </div>
+                    <div class="inner-form">
+
+                        <input type="button" value="Send" class="btn btn-outline-primary">
+                    </div>
+                </div>
+           
+       
+
+      </div>
+      <div class="logos">
+        <div class="copy">Copyright 2014 STRICT</div>
+        <div class="icons">
+            <div class="icon"><i class="fa-brands fa-square-facebook"></i></div>
+            <div class="icon"><i class="fa-brands fa-google-plus-g"></i></div>
+            <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+       </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
